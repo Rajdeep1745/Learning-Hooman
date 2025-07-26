@@ -21,6 +21,9 @@
   border-radius: 1rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   border: 1px solid #e9ecef;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .contact-form .form-control,
@@ -43,9 +46,21 @@
   margin-bottom: 0.5rem;
 }
 
+.contact-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form .message-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
 .contact-form textarea {
   resize: vertical;
   min-height: 120px;
+  flex: 1;
 }
 
 .contact-form .btn {
@@ -58,6 +73,12 @@
 .contact-form .btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+}
+
+.contact-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Contact Information Styles */
