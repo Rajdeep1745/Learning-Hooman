@@ -18,6 +18,10 @@ app.get("/contact", (req, res) => {
   res.render("contact.ejs", { year });
 });
 
+app.get("/testimonials", (req, res) => {
+  res.render("testimonials.ejs", { year });
+});
+
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
