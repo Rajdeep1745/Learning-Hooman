@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Careers - Join Our Team | Learning Hooman</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/Styles/career.css" />
+    <link rel="stylesheet" href="/Styles/header.css" />
+    <link rel="stylesheet" href="/Styles/footer.css" />
+  </head>
+  <body>
+    <%- include('partials/header',{ currYear : year }) %>
+
+    <!-- Hero Section -->
+    <section class="career-hero py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="hero-content">
+              <h1 class="display-4 fw-bold text-dark mb-4">
+                Join Our Team of Expert Tutors
+              </h1>
+              <p class="lead text-secondary mb-4">
+                Help shape the future of education and make a difference in
+                students' lives. We're looking for passionate, qualified tutors
+                to join our growing team.
+              </p>
+              <div class="hero-stats d-flex gap-4 mb-4">
+                <div class="stat-item">
+                  <h3 class="h4 fw-bold text-primary mb-1">50+</h3>
+                  <p class="text-secondary mb-0">Expert Tutors</p>
+                </div>
+                <div class="stat-item">
+                  <h3 class="h4 fw-bold text-primary mb-1">5000+</h3>
+                  <p class="text-secondary mb-0">Students Helped</p>
+                </div>
+                <div class="stat-item">
+                  <h3 class="h4 fw-bold text-primary mb-1">97%</h3>
+                  <p class="text-secondary mb-0">Success Rate</p>
+                </div>
+              </div>
+              <!-- <a href="#apply-form" class="btn btn-primary btn-lg">Apply Now</a> -->
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="hero-image text-center">
+              <img
+                src="/Images/Learning Hooman Logo.png"
+                alt="Learning Hooman Careers"
+                class="career-logo img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Join Us Section -->
+    <section class="why-join py-5" style="background-color: #e3f0ff">
+      <div class="container">
+        <h2 class="display-5 fw-bold text-center text-dark mb-5">
+          Why Join Learning Hooman?
+        </h2>
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div
+              class="feature-card text-center p-4 bg-white rounded shadow-sm h-100"
+            >
+              <div class="feature-icon mb-3">
+                <i class="fas fa-graduation-cap fa-3x text-primary"></i>
+              </div>
+              <h4 class="h5 fw-bold mb-3">Professional Growth</h4>
+              <p class="text-secondary">
+                Continuous training and development opportunities to enhance
+                your teaching skills and advance your career.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div
+              class="feature-card text-center p-4 bg-white rounded shadow-sm h-100"
+            >
+              <div class="feature-icon mb-3">
+                <i class="fas fa-clock fa-3x text-primary"></i>
+              </div>
+              <h4 class="h5 fw-bold mb-3">Flexible Schedule</h4>
+              <p class="text-secondary">
+                Choose your own hours and work from anywhere. Perfect for
+                balancing work with other commitments.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div
+              class="feature-card text-center p-4 bg-white rounded shadow-sm h-100"
+            >
+              <div class="feature-icon mb-3">
+                <i class="fas fa-dollar-sign fa-3x text-primary"></i>
+              </div>
+              <h4 class="h5 fw-bold mb-3">Competitive Pay</h4>
+              <p class="text-secondary">
+                Attractive compensation packages with performance bonuses and
+                incentives for exceptional results.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div
+              class="feature-card text-center p-4 bg-white rounded shadow-sm h-100"
+            >
+              <div class="feature-icon mb-3">
+                <i class="fas fa-users fa-3x text-primary"></i>
+              </div>
+              <h4 class="h5 fw-bold mb-3">Supportive Community</h4>
+              <p class="text-secondary">
+                Join a team of passionate educators who share your commitment to
+                student success and excellence.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div
+              class="feature-card text-center p-4 bg-white rounded shadow-sm h-100"
+            >
+              <div class="feature-icon mb-3">
+                <i class="fas fa-laptop fa-3x text-primary"></i>
+              </div>
+              <h4 class="h5 fw-bold mb-3">Modern Technology</h4>
+              <p class="text-secondary">
+                Access to cutting-edge teaching tools and platforms to deliver
+                engaging and effective online lessons.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div
+              class="feature-card text-center p-4 bg-white rounded shadow-sm h-100"
+            >
+              <div class="feature-icon mb-3">
+                <i class="fas fa-heart fa-3x text-primary"></i>
+              </div>
+              <h4 class="h5 fw-bold mb-3">Make a Difference</h4>
+              <p class="text-secondary">
+                Help students achieve their academic goals and build confidence
+                in their learning journey.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Job Details Section -->
+    <section class="job-details py-5">
+      <div class="container">
+        <h2 class="display-5 fw-bold text-center text-dark mb-5">
+          Tutor Position Details
+        </h2>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="job-card p-4 bg-light rounded h-100">
+              <h3 class="h4 fw-bold text-dark mb-4">What We're Looking For</h3>
+              <ul class="list-unstyled">
+                <li class="mb-3">
+                  <i class="fas fa-check text-success me-2"></i>
+                  <strong>Education:</strong> Bachelor's degree or higher in
+                  relevant subject
+                </li>
+                <li class="mb-3">
+                  <i class="fas fa-check text-success me-2"></i>
+                  <strong>Experience:</strong> 2+ years of teaching or tutoring
+                  experience
+                </li>
+                <li class="mb-3">
+                  <i class="fas fa-check text-success me-2"></i>
+                  <strong>Skills:</strong> Excellent communication and
+                  interpersonal skills
+                </li>
+                <li class="mb-3">
+                  <i class="fas fa-check text-success me-2"></i>
+                  <strong>Technology:</strong> Comfortable with online teaching
+                  platforms
+                </li>
+                <li class="mb-3">
+                  <i class="fas fa-check text-success me-2"></i>
+                  <strong>Passion:</strong> Genuine interest in helping students
+                  succeed
+                </li>
+                <li class="mb-3">
+                  <i class="fas fa-check text-success me-2"></i>
+                  <strong>Flexibility:</strong> Available for flexible
+                  scheduling
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="job-card p-4 bg-light rounded h-100">
+              <h3 class="h4 fw-bold text-dark mb-4">What You'll Do</h3>
+              <ul class="list-unstyled">
+                <li class="mb-3">
+                  <i class="fas fa-star text-warning me-2"></i>
+                  Conduct engaging online tutoring sessions
+                </li>
+                <li class="mb-3">
+                  <i class="fas fa-star text-warning me-2"></i>
+                  Develop personalized learning plans for students
+                </li>
+                <li class="mb-3">
+                  <i class="fas fa-star text-warning me-2"></i>
+                  Provide constructive feedback and progress reports
+                </li>
+                <li class="mb-3">
+                  <i class="fas fa-star text-warning me-2"></i>
+                  Collaborate with our academic team
+                </li>
+                <li class="mb-3">
+                  <i class="fas fa-star text-warning me-2"></i>
+                  Participate in training and professional development
+                </li>
+                <li class="mb-3">
+                  <i class="fas fa-star text-warning me-2"></i>
+                  Maintain high standards of teaching excellence
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Application Form Section -->
+    <!-- 
+    <section
+      id="apply-form"
+      class="application-form py-5"
+      style="background-color: #e3f0ff"
+    >
+      <div class="container">
+        <h2 class="display-5 fw-bold text-center text-dark mb-5">
+          Apply to Join Our Team
+        </h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="form-wrapper bg-white p-5 rounded shadow">
+              <form>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="firstName" class="form-label fw-bold"
+                      >First Name *</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="firstName"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="lastName" class="form-label fw-bold"
+                      >Last Name *</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="lastName"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="email" class="form-label fw-bold"
+                      >Email Address *</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="phone" class="form-label fw-bold"
+                      >Phone Number *</label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="phone"
+                      required
+                    />
+                  </div>
+                  <div class="col-12">
+                    <label for="education" class="form-label fw-bold"
+                      >Highest Education *</label
+                    >
+                    <select class="form-select" id="education" required>
+                      <option value="">Select your education level</option>
+                      <option value="bachelor">Bachelor's Degree</option>
+                      <option value="master">Master's Degree</option>
+                      <option value="phd">Ph.D.</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="experience" class="form-label fw-bold"
+                      >Years of Teaching Experience *</label
+                    >
+                    <select class="form-select" id="experience" required>
+                      <option value="">Select experience level</option>
+                      <option value="0-1">0-1 years</option>
+                      <option value="2-3">2-3 years</option>
+                      <option value="4-5">4-5 years</option>
+                      <option value="5+">5+ years</option>
+                    </select>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="motivation" class="form-label fw-bold"
+                      >Why do you want to join Learning Hooman? *</label
+                    >
+                    <textarea
+                      class="form-control"
+                      id="motivation"
+                      rows="4"
+                      placeholder="Tell us about your passion for teaching and why you'd be a great fit for our team..."
+                      required
+                    ></textarea>
+                  </div>
+                  <div class="col-12">
+                    <label for="resume" class="form-label fw-bold"
+                      >Upload Resume/CV *</label
+                    >
+                    <input
+                      type="file"
+                      class="form-control"
+                      id="resume"
+                      accept=".pdf,.doc,.docx"
+                      required
+                    />
+                    <div class="form-text">
+                      Please upload your resume in PDF, DOC, or DOCX format (max
+                      5MB)
+                    </div>
+                  </div>
+
+                  <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-primary btn-lg px-5">
+                      Submit Application
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    -->
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h2 class="display-5 fw-bold text-dark mb-4">
+              Ready to Make a Difference?
+            </h2>
+            <p class="lead text-secondary mb-4">
+              Join our team of dedicated educators and help students achieve
+              their dreams.
+            </p>
+            <div class="d-flex justify-content-center gap-3">
+              <!-- <a href="#apply-form" class="btn btn-primary btn-lg">Apply Now</a> -->
+              <a href="/contact" class="btn btn-outline-primary btn-lg"
+                >Contact Us</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <%- include('partials/footer',{ currYear : year }) %>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
