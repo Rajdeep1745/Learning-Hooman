@@ -1,0 +1,227 @@
+/* About Page Styles */
+.about-page {
+  font-family: "Inter", sans-serif;
+}
+
+/* Hero Section */
+.about-hero {
+  background: linear-gradient(180deg, #fff 0%, #e9ecef 100%);
+  padding: 4rem 0;
+}
+
+.about-logo {
+  max-width: 40em;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+/* Mission & Vision Icons */
+.mission-icon-wrapper,
+.vision-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  background: rgba(13, 110, 253, 0.1);
+  color: #0d6efd;
+}
+
+/* Core Values Icons */
+.value-icon-wrapper {
+  width: 70px;
+  height: 70px;
+  background: rgba(13, 110, 253, 0.1);
+  color: #0d6efd;
+}
+
+/* Team Section */
+.team-photo-wrapper {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.team-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Feature Icons */
+.feature-icon-small {
+  width: 50px;
+  height: 50px;
+  background: rgba(13, 110, 253, 0.1);
+  color: #0d6efd;
+}
+
+/* Achievements Section */
+.achievement-item h3 {
+  color: #fff;
+}
+
+.achievement-item p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Card Hover Effects */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Icon Hover Effects */
+.mission-icon-wrapper:hover,
+.vision-icon-wrapper:hover,
+.value-icon-wrapper:hover,
+.feature-icon-small:hover {
+  background: rgba(13, 110, 253, 0.2);
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+/* Team Member Hover Effects */
+.team-member {
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+}
+
+.team-photo-wrapper {
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover .team-photo-wrapper {
+  transform: scale(1.05);
+}
+
+/* Button Hover Effects */
+.cta-section .btn {
+  transition: all 0.3s ease;
+}
+
+.cta-section .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 2rem 0;
+  }
+
+  .about-logo {
+    max-width: 200px;
+  }
+
+  .team-photo-wrapper {
+    width: 120px;
+    height: 120px;
+  }
+
+  .mission-icon-wrapper,
+  .vision-icon-wrapper {
+    width: 60px;
+    height: 60px;
+  }
+
+  .value-icon-wrapper {
+    width: 50px;
+    height: 50px;
+  }
+
+  .feature-icon-small {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .about-hero .lead {
+    font-size: 1.1rem;
+  }
+
+  .team-photo-wrapper {
+    width: 100px;
+    height: 100px;
+  }
+
+  .achievement-item h3 {
+    font-size: 2rem;
+  }
+
+  .achievement-item p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Animation Classes */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Section Spacing */
+.about-page section {
+  position: relative;
+}
+
+.about-page section:not(:last-child) {
+  margin-bottom: 0;
+}
+
+/* Background Patterns */
+.about-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(
+      circle at 25% 25%,
+      rgba(13, 110, 253, 0.05) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 75% 75%,
+      rgba(13, 110, 253, 0.05) 0%,
+      transparent 50%
+    );
+  pointer-events: none;
+}
+
+/* Custom Scrollbar for About Page */
+.about-page::-webkit-scrollbar {
+  width: 8px;
+}
+
+.about-page::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.about-page::-webkit-scrollbar-thumb {
+  background: #0d6efd;
+  border-radius: 4px;
+}
+
+.about-page::-webkit-scrollbar-thumb:hover {
+  background: #0b5ed7;
+}

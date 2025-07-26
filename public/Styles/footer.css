@@ -1,0 +1,48 @@
+.footer-top-section {
+  background: #e3f0ff;
+  color: #1e3a8a;
+  padding: 60px 0 40px 0;
+}
+
+.footer-top-section h2 {
+  font-family: "Roboto Slab", serif;
+  font-size: 2.2rem;
+}
+.footer-top-section p {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 24px;
+}
+.footer-main-section {
+  background: #fff;
+  padding: 16px 0 0 0;
+}
+.footer-logo img {
+  height: 130px;
+}
+.footer-nav {
+  gap: 24px;
+  font-size: 1rem;
+}
+.footer-social {
+  gap: 20px;
+}
+.footer-social img {
+  height: 32px;
+  width: 32px;
+  object-fit: contain;
+}
+.footer-copyright {
+  color: #555;
+  font-size: 0.95rem;
+}
+.footer-whatsapp-icon {
+  width: 28px;
+  vertical-align: middle;
+}
+.footer-contact-number p {
+  margin-bottom: 4px;
+}
+.footer-contact-number p:last-child {
+  margin-bottom: 0;
+}

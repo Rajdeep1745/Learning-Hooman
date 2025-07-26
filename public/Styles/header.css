@@ -1,0 +1,101 @@
+.logo {
+  width: 260px;
+  height: auto;
+}
+
+.navbar-middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.instaLogo {
+  margin-right: 2.5rem;
+  margin-left: 1.25rem;
+}
+
+.socialLogo,
+.facebookLogo,
+.instaLogo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+}
+
+.container-header {
+  background: linear-gradient(to top, white, #fffacd);
+}
+
+/* Show all dropdown menus on hover */
+.navbar .dropdown:hover > .dropdown-menu,
+.navbar .dropdown:focus-within > .dropdown-menu {
+  display: block;
+}
+
+/* Nested dropdown styles for Bootstrap 5 */
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+  margin-left: 0.1rem;
+  border-radius: 0.25rem;
+  min-width: 180px;
+  display: none;
+  position: absolute;
+}
+
+.dropdown-submenu:hover > .dropdown-menu,
+.dropdown-submenu:focus-within > .dropdown-menu {
+  display: block;
+}
+
+@media (max-width: 464px) {
+  .container-header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0;
+    padding: 0;
+  }
+  .custom-logo.logo {
+    display: block;
+    margin: 0 auto 8px auto;
+  }
+  .header-bottom-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8px;
+  }
+  .navbar-toggler {
+    order: 1;
+  }
+  .social-icons {
+    order: 2;
+    margin-left: 80%;
+
+  }
+  .socialLogo,
+  .facebookLogo,
+  .instaLogo {
+    width: 24px;
+    height: 24px;
+    margin: 10px;
+  }
+}
+@media (max-width: 340px) {
+  .social-icons {
+    margin-left: 0;
+  }
+}

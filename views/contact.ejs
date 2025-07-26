@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Learning Hooman</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/Styles/header.css" />
+    <link rel="stylesheet" href="/Styles/footer.css" />
+    <link rel="stylesheet" href="/Styles/contact.css" />
+  </head>
+  <body>
+    <%- include("partials/header.ejs") %>
+
+    <div class="contact-page">
+      <!-- Hero Section -->
+      <section class="contact-hero">
+        <div class="container">
+          <div class="row align-items-center min-vh-75">
+            <div class="col-lg-6">
+              <h1 class="display-3 fw-bold text-dark mb-4">Get in Touch</h1>
+              <p class="lead fs-4 text-secondary mb-4">
+                Ready to start your learning journey? We're here to help you
+                every step of the way.
+              </p>
+              <p class="fs-5 text-muted">
+                Have questions about our tutoring services? Want to schedule a
+                free consultation? Our team is ready to assist you with
+                personalized learning solutions.
+              </p>
+            </div>
+            <div class="col-lg-6 text-center">
+              <img
+                src="/Images/Learning Hooman Logo.png"
+                alt="Learning Hooman Logo"
+                class="img-fluid contact-logo"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Form & Information Section -->
+      <section class="contact-main py-5">
+        <div class="container">
+          <div class="row g-5">
+            <!-- Contact Form -->
+            <div class="col-lg-8">
+              <div class="contact-form-wrapper">
+                <h2 class="display-5 fw-bold text-dark mb-4">
+                  Send us a Message
+                </h2>
+                <p class="text-secondary mb-4">
+                  Fill out the form below and we'll get back to you within 24
+                  hours.
+                </p>
+
+                <form class="contact-form">
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="firstName" class="form-label fw-medium"
+                          >First Name *</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="firstName"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="lastName" class="form-label fw-medium"
+                          >Last Name *</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="lastName"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="email" class="form-label fw-medium"
+                          >Email Address *</label
+                        >
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="email"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="phone" class="form-label fw-medium"
+                          >Phone Number</label
+                        >
+                        <input type="tel" class="form-control" id="phone" />
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-group">
+                        <label for="subject" class="form-label fw-medium"
+                          >Subject *</label
+                        >
+                        <select class="form-select" id="subject" required>
+                          <option value="">Select a subject</option>
+                          <option value="general">General Inquiry</option>
+                          <option value="tutoring">Tutoring Services</option>
+                          <option value="consultation">
+                            Free Consultation
+                          </option>
+                          <option value="pricing">Pricing Information</option>
+                          <option value="support">Technical Support</option>
+                          <option value="other">Other</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-group">
+                        <label for="message" class="form-label fw-medium"
+                          >Message *</label
+                        >
+                        <textarea
+                          class="form-control"
+                          id="message"
+                          rows="5"
+                          placeholder="Tell us how we can help you..."
+                          required
+                        ></textarea>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <button type="submit" class="btn btn-primary btn-lg px-5">
+                        <i class="fas fa-paper-plane me-2"></i>Send Message
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="col-lg-4">
+              <div class="contact-info-wrapper">
+                <h3 class="h3 fw-bold text-dark mb-4">Contact Information</h3>
+
+                <!-- Phone -->
+                <div class="contact-item mb-4">
+                  <div class="contact-icon-wrapper">
+                    <i class="fas fa-phone text-primary"></i>
+                  </div>
+                  <div class="contact-details">
+                    <h5 class="h6 fw-bold mb-1">Phone</h5>
+                    <p class="text-secondary mb-0">+91 99321 15387</p>
+                    <p class="text-secondary mb-0">+91 70990 39373</p>
+                  </div>
+                </div>
+
+                <!-- Email -->
+                <div class="contact-item mb-4">
+                  <div class="contact-icon-wrapper">
+                    <i class="fas fa-envelope text-primary"></i>
+                  </div>
+                  <div class="contact-details">
+                    <h5 class="h6 fw-bold mb-1">Email</h5>
+                    <p class="text-secondary mb-0">
+                      learninghoomanedu@gmail.com
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Address -->
+                <div class="contact-item mb-4">
+                  <div class="contact-icon-wrapper">
+                    <i class="fas fa-map-marker-alt text-primary"></i>
+                  </div>
+                  <div class="contact-details">
+                    <h5 class="h6 fw-bold mb-1">Address</h5>
+                    <p class="text-secondary mb-0">
+                      Beguntary, Jalpaiguri, <br />
+                      West Bengal, India
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Business Hours -->
+                <div class="contact-item mb-4">
+                  <div class="contact-icon-wrapper">
+                    <i class="fas fa-clock text-primary"></i>
+                  </div>
+                  <div class="contact-details">
+                    <h5 class="h6 fw-bold mb-1">Business Hours</h5>
+                    <p class="text-secondary mb-0">
+                      Monday - Friday: 9:00 AM - 8:00 PM
+                    </p>
+                    <p class="text-secondary mb-0">
+                      Saturday: 9:00 AM - 6:00 PM
+                    </p>
+                    <p class="text-secondary mb-0">
+                      Sunday: 10:00 AM - 4:00 PM
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Social Media -->
+                <div class="contact-item">
+                  <div class="contact-icon-wrapper">
+                    <i class="fas fa-share-alt text-primary"></i>
+                  </div>
+                  <div class="contact-details">
+                    <h5 class="h6 fw-bold mb-2">Follow Us</h5>
+                    <div class="social-links">
+                      <a
+                        href="https://www.facebook.com/share/1PJmEByBYQ/"
+                        class="social-link"
+                        target="_blank"
+                      >
+                        <i class="fab fa-facebook-f"></i>
+                      </a>
+                      <a
+                        href="https://www.instagram.com/hoomanlearning?igsh=MWhidXVmdjNlMGxwbg=="
+                        class="social-link"
+                        target="_blank"
+                      >
+                        <i class="fab fa-instagram"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="faq-section py-5" style="background-color: #e3f0ff">
+        <div class="container">
+          <h2 class="display-5 fw-bold text-center text-dark mb-5">
+            Frequently Asked Questions
+          </h2>
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <div class="faq-item">
+                <h4 class="h5 fw-bold mb-2">
+                  How do I schedule a free consultation?
+                </h4>
+                <p class="text-secondary">
+                  You can schedule a free consultation by filling out our
+                  contact form above, calling us directly, or sending us an
+                  email. We'll get back to you within 24 hours to arrange a
+                  convenient time.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="faq-item">
+                <h4 class="h5 fw-bold mb-2">
+                  What subjects do you offer tutoring for?
+                </h4>
+                <p class="text-secondary">
+                  We offer comprehensive tutoring in Mathematics, Science, and
+                  English Language Arts (ELA) for students from primary school
+                  through high school levels.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="faq-item">
+                <h4 class="h5 fw-bold mb-2">
+                  Are your sessions conducted online?
+                </h4>
+                <p class="text-secondary">
+                  Yes, all our tutoring sessions are conducted online through
+                  our secure platform, making it convenient for students to
+                  learn from anywhere.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="faq-item">
+                <h4 class="h5 fw-bold mb-2">
+                  How do you personalize learning for each student?
+                </h4>
+                <p class="text-secondary">
+                  We assess each student's learning style, strengths, and areas
+                  for improvement to create customized learning plans that adapt
+                  to their individual needs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action Section -->
+      <section class="cta-section py-5">
+        <div class="container text-center">
+          <h2 class="display-5 fw-bold text-dark mb-4">
+            Ready to Start Your Learning Journey?
+          </h2>
+          <p class="fs-5 text-secondary mb-4">
+            Join thousands of students who have transformed their academic
+            performance with Learning Hooman.
+          </p>
+          <div class="d-flex justify-content-center gap-3 flex-wrap">
+            <a href="#" class="btn btn-primary btn-lg"
+              >Schedule Free Consultation</a
+            >
+            <a href="#" class="btn btn-outline-primary btn-lg"
+              >View Our Programs</a
+            >
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <%- include("partials/footer.ejs",{ currYear : year }) %>
+
+    <!-- Bootstrap JS Bundle -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
