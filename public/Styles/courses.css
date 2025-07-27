@@ -1,0 +1,49 @@
+/* Courses Page Custom Styles */
+
+.courses-hero {
+  background: linear-gradient(120deg, #6a82fb 0%, #fc5c7d 100%);
+  color: #fff;
+  padding: 60px 0 40px 0;
+  border-radius: 0 0 2rem 2rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+.courses-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.courses-hero p {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+.courses-contact-section {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+  padding: 2.5rem 2rem;
+  margin-top: -3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.courses-contact-section h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #6a82fb;
+  margin-bottom: 1rem;
+}
+.courses-contact-section .lead {
+  color: #555;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 768px) {
+  .courses-hero h1 {
+    font-size: 2.1rem;
+  }
+  .courses-contact-section {
+    padding: 1.2rem 0.5rem;
+  }
+}

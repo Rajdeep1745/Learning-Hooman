@@ -23,6 +23,7 @@ app.get("/testimonials", (req, res) =>
 );
 app.get("/career", (req, res) => res.render("career.ejs", { year }));
 app.get("/pricing", (req, res) => res.render("pricing.ejs", { year }));
+app.get("/courses", (req, res) => res.render("courses.ejs", { year }));
 
 // Handle email subscription
 app.post("/subscribe", (req, res) => {
