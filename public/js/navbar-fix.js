@@ -1,4 +1,5 @@
 // Navbar Fix Script
+/*
 document.addEventListener("DOMContentLoaded", function () {
   console.log("Navbar fix script loaded");
 
@@ -35,3 +36,4 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("Collapse:", navbarCollapse);
   }
 });
+*/

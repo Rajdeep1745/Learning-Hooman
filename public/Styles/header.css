@@ -126,40 +126,40 @@
   .navbar-middle {
     justify-content: flex-start;
   }
-  
+
   .navbar-collapse {
     flex-basis: 100%;
     flex-grow: 1;
     align-items: center;
   }
-  
+
   .navbar-nav {
     text-align: left;
   }
-  
+
   .dropdown-menu {
     border: none;
     box-shadow: none;
     background-color: #f8f9fa;
   }
-  
+
   /* Ensure navbar toggler is visible and clickable */
   .navbar-toggler {
     display: block !important;
     z-index: 1000;
   }
-  
+
   /* Ensure collapsed content is properly hidden/shown */
   .navbar-collapse.collapse:not(.show) {
     display: none !important;
   }
-  
+
   .navbar-collapse.collapsing {
     height: auto;
     overflow: hidden;
     transition: height 0.35s ease;
   }
-  
+
   .navbar-collapse.collapse.show {
     display: block !important;
   }
