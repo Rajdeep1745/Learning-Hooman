@@ -81,6 +81,20 @@
   margin: 0 0.125rem;
 }
 
+/* Ensure navbar toggler works properly */
+.navbar-toggler {
+  border: none;
+  padding: 0.25rem 0.5rem;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
 /* Show all dropdown menus on hover */
 .navbar .dropdown:hover > .dropdown-menu,
 .navbar .dropdown:focus-within > .dropdown-menu {
@@ -106,6 +120,49 @@
 .dropdown-submenu:hover > .dropdown-menu,
 .dropdown-submenu:focus-within > .dropdown-menu {
   display: block;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-middle {
+    justify-content: flex-start;
+  }
+  
+  .navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
+  }
+  
+  .navbar-nav {
+    text-align: left;
+  }
+  
+  .dropdown-menu {
+    border: none;
+    box-shadow: none;
+    background-color: #f8f9fa;
+  }
+  
+  /* Ensure navbar toggler is visible and clickable */
+  .navbar-toggler {
+    display: block !important;
+    z-index: 1000;
+  }
+  
+  /* Ensure collapsed content is properly hidden/shown */
+  .navbar-collapse.collapse:not(.show) {
+    display: none !important;
+  }
+  
+  .navbar-collapse.collapsing {
+    height: auto;
+    overflow: hidden;
+    transition: height 0.35s ease;
+  }
+  
+  .navbar-collapse.collapse.show {
+    display: block !important;
+  }
 }
 
 @media (max-width: 464px) {
