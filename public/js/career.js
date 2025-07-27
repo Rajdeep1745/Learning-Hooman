@@ -1,30 +1,31 @@
-// Google Sheets API configuration for contact form
-const CONTACT_GOOGLE_SHEETS_API_URL =
+// Google Sheets API configuration for career form
+const CAREER_GOOGLE_SHEETS_API_URL =
   "https://script.google.com/macros/s/AKfycbxTwhYGf4pU9C0MhT1lfY4iJVvo7SgQ9SUTqO0Mmy2u19l8KIJKXmc6zl93yp0KqcgPcg/exec";
 
-// Function to add contact form data to Google Sheets
-async function addContactToGoogleSheets(contactData) {
+// Function to add career application to Google Sheets
+async function addCareerToGoogleSheets(careerData) {
   try {
     console.log(
-      "Attempting to send contact form to Google Sheets:",
-      contactData
+      "Attempting to send career application to Google Sheets:",
+      careerData
     );
-    console.log("Using URL:", CONTACT_GOOGLE_SHEETS_API_URL);
+    console.log("Using URL:", CAREER_GOOGLE_SHEETS_API_URL);
 
     const requestData = {
-      firstName: contactData.firstName,
-      lastName: contactData.lastName,
-      email: contactData.email,
-      phone: contactData.phone || "Not provided",
-      subject: contactData.subject,
-      message: contactData.message,
+      firstName: careerData.firstName,
+      lastName: careerData.lastName,
+      email: careerData.email,
+      phone: careerData.phone,
+      education: careerData.education,
+      experience: careerData.experience,
+      motivation: careerData.motivation,
       timestamp: new Date().toISOString(),
-      source: "contact_form",
+      source: "career_form",
     };
 
-    console.log("Sending contact data:", requestData);
+    console.log("Sending career data:", requestData);
 
-    const response = await fetch(CONTACT_GOOGLE_SHEETS_API_URL, {
+    const response = await fetch(CAREER_GOOGLE_SHEETS_API_URL, {
       method: "POST",
       mode: "no-cors", // Required for Google Apps Script
       headers: {
@@ -39,17 +40,17 @@ async function addContactToGoogleSheets(contactData) {
 
     return { success: true };
   } catch (error) {
-    console.error("Error adding contact form to Google Sheets:", error);
+    console.error("Error adding career application to Google Sheets:", error);
     return { success: false, error: error.message };
   }
 }
 
-// Contact form handling
-async function handleContactForm(event) {
+// Career application form handling
+async function handleCareerForm(event) {
   event.preventDefault();
 
   const form = event.target;
-  const submitButton = form.querySelector('button[name="contact"]');
+  const submitButton = form.querySelector('button[name="career"]');
   const originalButtonText = submitButton.innerHTML;
 
   // Get form data
@@ -61,8 +62,10 @@ async function handleContactForm(event) {
     "firstName",
     "lastName",
     "email",
-    "subject",
-    "message",
+    "phone",
+    "education",
+    "experience",
+    "motivation",
   ];
   const missingFields = requiredFields.filter(
     (field) => !data[field] || data[field].trim() === ""
@@ -80,14 +83,21 @@ async function handleContactForm(event) {
     return;
   }
 
+  // Phone validation
+  const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
+  if (!phoneRegex.test(data.phone.replace(/\s/g, ""))) {
+    alert("Please enter a valid phone number.");
+    return;
+  }
+
   // Show loading state
   submitButton.innerHTML =
-    '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
+    '<i class="fas fa-spinner fa-spin me-2"></i>Submitting...';
   submitButton.disabled = true;
 
   try {
     // First, send to our server
-    const response = await fetch("/contact", {
+    const response = await fetch("/career", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -99,20 +109,20 @@ async function handleContactForm(event) {
 
     if (result.success) {
       // Then send to Google Sheets
-      const sheetsResult = await addContactToGoogleSheets(data);
+      const sheetsResult = await addCareerToGoogleSheets(data);
 
       if (sheetsResult.success) {
         alert(
-          "Thank you for your message! We'll get back to you within 24 hours."
+          "Thank you for your application! We'll review your submission and get back to you within 3-5 business days."
         );
         form.reset();
         window.scrollTo({ top: 0, behavior: "smooth" });
       } else {
         console.warn(
-          "Contact form saved to server but failed to add to Google Sheets"
+          "Career application saved to server but failed to add to Google Sheets"
         );
         alert(
-          "Thank you for your message! We'll get back to you within 24 hours."
+          "Thank you for your application! We'll review your submission and get back to you within 3-5 business days."
         );
         form.reset();
         window.scrollTo({ top: 0, behavior: "smooth" });
@@ -121,8 +131,10 @@ async function handleContactForm(event) {
       alert(result.message || "An error occurred. Please try again.");
     }
   } catch (error) {
-    console.error("Error submitting contact form:", error);
-    alert("An error occurred while sending your message. Please try again.");
+    console.error("Error submitting career application:", error);
+    alert(
+      "An error occurred while submitting your application. Please try again."
+    );
   } finally {
     // Reset button
     submitButton.innerHTML = originalButtonText;
@@ -130,10 +142,10 @@ async function handleContactForm(event) {
   }
 }
 
-// Initialize contact form handling when DOM is loaded
+// Initialize career form handling when DOM is loaded
 document.addEventListener("DOMContentLoaded", function () {
-  const contactForm = document.querySelector(".contact-form");
-  if (contactForm) {
-    contactForm.addEventListener("submit", handleContactForm);
+  const careerForm = document.querySelector(".career-form");
+  if (careerForm) {
+    careerForm.addEventListener("submit", handleCareerForm);
   }
 });

@@ -1,6 +1,6 @@
 // Google Sheets API configuration
 const GOOGLE_SHEETS_API_URL =
-  "https://script.google.com/macros/s/AKfycbx3vsosHjZKopJHpG7u1VUupDV1MJ8C0ROEPF7KN8ESjSrmfK4EBeUcdlM_HwDj3NEEfg/exec";
+  "https://script.google.com/macros/s/AKfycbxTwhYGf4pU9C0MhT1lfY4iJVvo7SgQ9SUTqO0Mmy2u19l8KIJKXmc6zl93yp0KqcgPcg/exec";
 
 // Function to add email to Google Sheets
 async function addEmailToGoogleSheets(email) {
