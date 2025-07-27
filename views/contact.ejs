@@ -58,7 +58,6 @@
         <div class="container">
           <div class="row g-5">
             <!-- Contact Form -->
-            <!-- 
             <div class="col-lg-8">
               <div class="contact-form-wrapper">
                 <h2 class="display-5 fw-bold text-dark mb-4">
@@ -69,7 +68,7 @@
                   hours.
                 </p>
 
-                <form class="contact-form">
+                <form class="contact-form" method="POST" action="/contact">
                   <div class="row g-3">
                     <div class="col-md-6">
                       <div class="form-group">
@@ -80,6 +79,7 @@
                           type="text"
                           class="form-control"
                           id="firstName"
+                          name="firstName"
                           required
                         />
                       </div>
@@ -93,6 +93,7 @@
                           type="text"
                           class="form-control"
                           id="lastName"
+                          name="lastName"
                           required
                         />
                       </div>
@@ -106,6 +107,7 @@
                           type="email"
                           class="form-control"
                           id="email"
+                          name="email"
                           required
                         />
                       </div>
@@ -115,7 +117,12 @@
                         <label for="phone" class="form-label fw-medium"
                           >Phone Number</label
                         >
-                        <input type="tel" class="form-control" id="phone" />
+                        <input
+                          type="tel"
+                          class="form-control"
+                          id="phone"
+                          name="phone"
+                        />
                       </div>
                     </div>
                     <div class="col-12">
@@ -123,7 +130,12 @@
                         <label for="subject" class="form-label fw-medium"
                           >Subject *</label
                         >
-                        <select class="form-select" id="subject" required>
+                        <select
+                          class="form-select"
+                          id="subject"
+                          name="subject"
+                          required
+                        >
                           <option value="">Select a subject</option>
                           <option value="general">General Inquiry</option>
                           <option value="tutoring">Tutoring Services</option>
@@ -144,6 +156,7 @@
                         <textarea
                           class="form-control"
                           id="message"
+                          name="message"
                           rows="5"
                           placeholder="Tell us how we can help you..."
                           required
@@ -151,7 +164,11 @@
                       </div>
                     </div>
                     <div class="col-12">
-                      <button type="submit" class="btn btn-primary btn-lg px-5">
+                      <button
+                        type="submit"
+                        class="btn btn-primary btn-lg px-5"
+                        name="contact"
+                      >
                         <i class="fas fa-paper-plane me-2"></i>Send Message
                       </button>
                     </div>
@@ -159,85 +176,74 @@
                 </form>
               </div>
             </div>
-            -->
 
             <!-- Contact Information -->
-            <div class="col-12">
+            <div class="col-lg-4">
               <div class="contact-info-wrapper">
-                <h3 class="h3 fw-bold text-dark mb-5 text-center">
-                  Contact Information
-                </h3>
+                <h3 class="h3 fw-bold text-dark mb-4">Contact Information</h3>
 
-                <div class="row g-5">
+                <div class="contact-info-vertical">
                   <!-- Phone -->
-                  <div class="col-lg-3 col-md-6">
-                    <div class="contact-item text-center p-4">
-                      <div class="contact-icon-wrapper mb-4">
-                        <i class="fas fa-phone text-primary"></i>
-                      </div>
-                      <div class="contact-details">
-                        <h5 class="h6 fw-bold mb-3">Phone</h5>
-                        <p class="text-secondary mb-2">+91 99321 15387</p>
-                        <p class="text-secondary mb-0">+91 70990 39373</p>
-                      </div>
+                  <div class="contact-item-vertical mb-4">
+                    <div class="contact-icon-wrapper-vertical mb-3">
+                      <i class="fas fa-phone text-primary"></i>
+                    </div>
+                    <div class="contact-details-vertical">
+                      <h5 class="h6 fw-bold mb-2">Phone</h5>
+                      <p class="text-secondary mb-1">+91 99321 15387</p>
+                      <p class="text-secondary mb-0">+91 70990 39373</p>
                     </div>
                   </div>
 
                   <!-- Email -->
-                  <div class="col-lg-3 col-md-6">
-                    <div class="contact-item text-center p-4">
-                      <div class="contact-icon-wrapper mb-4">
-                        <i class="fas fa-envelope text-primary"></i>
-                      </div>
-                      <div class="contact-details">
-                        <h5 class="h6 fw-bold mb-3">Email</h5>
-                        <p class="text-secondary mb-0">
-                          learninghoomanedu@gmail.com
-                        </p>
-                      </div>
+                  <div class="contact-item-vertical mb-4">
+                    <div class="contact-icon-wrapper-vertical mb-3">
+                      <i class="fas fa-envelope text-primary"></i>
+                    </div>
+                    <div class="contact-details-vertical">
+                      <h5 class="h6 fw-bold mb-2">Email</h5>
+                      <p class="text-secondary mb-0">
+                        learninghoomanedu@gmail.com
+                      </p>
                     </div>
                   </div>
 
                   <!-- Address -->
-                  <div class="col-lg-3 col-md-6">
-                    <div class="contact-item text-center p-4">
-                      <div class="contact-icon-wrapper mb-4">
-                        <i class="fas fa-map-marker-alt text-primary"></i>
-                      </div>
-                      <div class="contact-details">
-                        <h5 class="h6 fw-bold mb-3">Address</h5>
-                        <p class="text-secondary mb-0">
-                          Beguntary, Jalpaiguri, <br />
-                          West Bengal, India
-                        </p>
-                      </div>
+                  <div class="contact-item-vertical mb-4">
+                    <div class="contact-icon-wrapper-vertical mb-3">
+                      <i class="fas fa-map-marker-alt text-primary"></i>
+                    </div>
+                    <div class="contact-details-vertical">
+                      <h5 class="h6 fw-bold mb-2">Address</h5>
+                      <p class="text-secondary mb-0">
+                        Beguntary, Jalpaiguri, <br />
+                        West Bengal, India
+                      </p>
                     </div>
                   </div>
 
                   <!-- Social Media -->
-                  <div class="col-lg-3 col-md-6">
-                    <div class="contact-item text-center p-4">
-                      <div class="contact-icon-wrapper mb-4">
-                        <i class="fas fa-share-alt text-primary"></i>
-                      </div>
-                      <div class="contact-details">
-                        <h5 class="h6 fw-bold mb-4">Follow Us</h5>
-                        <div class="social-links justify-content-center">
-                          <a
-                            href="https://www.facebook.com/share/1PJmEByBYQ/"
-                            class="social-link"
-                            target="_blank"
-                          >
-                            <i class="fab fa-facebook-f"></i>
-                          </a>
-                          <a
-                            href="https://www.instagram.com/hoomanlearning?igsh=MWhidXVmdjNlMGxwbg=="
-                            class="social-link"
-                            target="_blank"
-                          >
-                            <i class="fab fa-instagram"></i>
-                          </a>
-                        </div>
+                  <div class="contact-item-vertical">
+                    <div class="contact-icon-wrapper-vertical mb-3">
+                      <i class="fas fa-share-alt text-primary"></i>
+                    </div>
+                    <div class="contact-details-vertical">
+                      <h5 class="h6 fw-bold mb-3">Follow Us</h5>
+                      <div class="social-links-vertical">
+                        <a
+                          href="https://www.facebook.com/share/1PJmEByBYQ/"
+                          class="social-link-vertical me-3"
+                          target="_blank"
+                        >
+                          <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a
+                          href="https://www.instagram.com/hoomanlearning?igsh=MWhidXVmdjNlMGxwbg=="
+                          class="social-link-vertical"
+                          target="_blank"
+                        >
+                          <i class="fab fa-instagram"></i>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -338,5 +344,7 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <!-- Contact Form Script -->
+    <script src="/js/contact.js"></script>
   </body>
 </html>

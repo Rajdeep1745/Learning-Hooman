@@ -336,9 +336,10 @@
       <h2 class="subscribe-title">
         Wish to know more about admissions and updates? Subscribe now!
       </h2>
-      <form class="subscribe-form">
-        <input type="email" placeholder="Email address" required>
-        <button type="submit">Subscribe</button>
+      <form class="subscribe-form" method="POST">
+        <label for="email"></label>
+        <input type="email" name="email" placeholder="Email address" required>
+        <button type="submit" name="subscribe">Subscribe</button>
       </form>
     </div>
   </div>
@@ -349,5 +350,7 @@
       xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <!-- Custom Subscribe Script -->
+    <script src="/js/subscribe.js"></script>
   </body>
 </html>
