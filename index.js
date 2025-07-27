@@ -22,6 +22,7 @@ app.get("/testimonials", (req, res) =>
   res.render("testimonials.ejs", { year })
 );
 app.get("/career", (req, res) => res.render("career.ejs", { year }));
+app.get("/pricing", (req, res) => res.render("pricing.ejs", { year }));
 
 // Handle email subscription
 app.post("/subscribe", (req, res) => {

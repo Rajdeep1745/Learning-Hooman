@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Specialized Courses - Expert Tutoring Programs | Learning Hooman
+    </title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/Styles/pricing.css" />
+    <link rel="stylesheet" href="/Styles/header.css" />
+    <link rel="stylesheet" href="/Styles/footer.css" />
+  </head>
+  <body>
+    <%- include('partials/header',{ currYear : year }) %>
+
+    <!-- Hero Section -->
+    <section class="pricing-hero py-5">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-8">
+            <h1 class="display-4 fw-bold text-dark mb-4">
+              Specialized Learning Programs
+            </h1>
+            <p class="lead text-secondary mb-5">
+              Expert-led specialized courses designed to help you excel in
+              competitive exams and technical subjects. Start your specialized
+              learning journey today with our experienced tutors.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Special Courses Section -->
+    <section class="special-courses py-5" style="background-color: #f8f9fa">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-lg-8">
+            <h2 class="display-5 fw-bold text-dark mb-4">
+              Our Specialized Programs
+            </h2>
+            <p class="lead text-secondary">
+              Expert-led courses designed to help you excel in competitive exams and technical subjects
+            </p>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="course-card text-center">
+              <div class="course-icon mb-3">
+                <i class="fas fa-code fa-3x text-primary"></i>
+              </div>
+              <h4>Coding Classes</h4>
+              <p class="text-secondary">Python, Java, Web Development</p>
+              <a href="/contact" class="btn btn-outline-primary">Learn More</a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="course-card text-center">
+              <div class="course-icon mb-3">
+                <i class="fas fa-flask fa-3x text-primary"></i>
+              </div>
+              <h4>NEET Classes</h4>
+              <p class="text-secondary">Biology, Chemistry, Physics</p>
+              <a href="/contact" class="btn btn-outline-primary">Learn More</a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="course-card text-center">
+              <div class="course-icon mb-3">
+                <i class="fas fa-calculator fa-3x text-primary"></i>
+              </div>
+              <h4>JEE Classes</h4>
+              <p class="text-secondary">Mathematics, Physics, Chemistry</p>
+              <a href="/contact" class="btn btn-outline-primary">Learn More</a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="course-card text-center">
+              <div class="course-icon mb-3">
+                <i class="fas fa-gavel fa-3x text-primary"></i>
+              </div>
+              <h4>CLAT Classes</h4>
+              <p class="text-secondary">Legal Aptitude, English, GK</p>
+              <a href="/contact" class="btn btn-outline-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section py-5">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-lg-8">
+            <h2 class="display-5 fw-bold text-dark mb-4">
+              Frequently Asked Questions
+            </h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="accordion" id="pricingFAQ">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq1"
+                  >
+                    How do I get started with tutoring?
+                  </button>
+                </h2>
+                <div
+                  id="faq1"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#pricingFAQ"
+                >
+                  <div class="accordion-body">
+                    Getting started is easy! Simply contact us through our
+                    contact form or call us directly. We'll schedule a free
+                    consultation to understand your learning needs and match you
+                    with the perfect tutor.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq2"
+                  >
+                    What subjects do you offer tutoring for?
+                  </button>
+                </h2>
+                <div
+                  id="faq2"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#pricingFAQ"
+                >
+                  <div class="accordion-body">
+                    We offer tutoring for all subjects from grades 1-12,
+                    including Mathematics, Science, English, Social Studies, and
+                    more. We also provide specialized coaching for competitive
+                    exams like NEET, JEE, CLAT, and coding classes.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq3"
+                  >
+                    Are your tutors qualified and experienced?
+                  </button>
+                </h2>
+                <div
+                  id="faq3"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#pricingFAQ"
+                >
+                  <div class="accordion-body">
+                    Yes, all our tutors are highly qualified with degrees from
+                    reputed institutions and extensive teaching experience. They
+                    undergo rigorous training and are regularly evaluated to
+                    ensure the highest quality of education.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq4"
+                  >
+                    How do online tutoring sessions work?
+                  </button>
+                </h2>
+                <div
+                  id="faq4"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#pricingFAQ"
+                >
+                  <div class="accordion-body">
+                    Our online tutoring sessions are conducted through secure
+                    video conferencing platforms. Students can interact with
+                    tutors in real-time, share screens, use digital whiteboards,
+                    and access study materials. All sessions are recorded for
+                    future reference.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-8">
+            <h2 class="display-5 fw-bold text-dark mb-4">
+              Ready to Start Learning?
+            </h2>
+            <p class="lead text-secondary mb-4">
+              Join thousands of students who have improved their grades with
+              Learning Hooman
+            </p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+              <a href="/contact" class="btn btn-primary btn-lg"
+                >Get Started Today</a
+              >
+              <a href="/testimonials" class="btn btn-outline-primary btn-lg"
+                >View Testimonials</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <%- include('partials/footer',{ currYear : year }) %>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/pricing.js"></script>
+  </body>
+</html>
