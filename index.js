@@ -15,7 +15,7 @@ app.use(express.json());
 app.set("view engine", "ejs");
 
 // Routes
-app.get("/", (req, res) => res.render("index.ejs", { year }));
+app.get("/", (req, res) => res.render("home.ejs", { year }));
 app.get("/about", (req, res) => res.render("about.ejs", { year }));
 app.get("/contact", (req, res) => res.render("contact.ejs", { year }));
 app.get("/testimonials", (req, res) =>
