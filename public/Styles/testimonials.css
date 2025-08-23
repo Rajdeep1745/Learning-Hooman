@@ -1,3 +1,10 @@
+body {
+  font-family: "Andada Pro", serif;
+  background: #fafbfc;
+  margin: 0;
+  padding: 0;
+}
+
 /* Testimonials Page Styles */
 .testimonials-page {
   font-family: "Inter", sans-serif;

@@ -1,4 +1,10 @@
 /* Pricing Page Styles */
+body {
+  font-family: "Andada Pro", serif;
+  background: #fafbfc;
+  margin: 0;
+  padding: 0;
+}
 
 /* Hero Section */
 .pricing-hero {

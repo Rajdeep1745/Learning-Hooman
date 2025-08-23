@@ -1,4 +1,10 @@
 /* Courses Page Custom Styles */
+body {
+  font-family: "Andada Pro", serif;
+  background: #fafbfc;
+  margin: 0;
+  padding: 0;
+}
 
 .courses-hero {
   background: linear-gradient(120deg, #6a82fb 0%, #fc5c7d 100%);

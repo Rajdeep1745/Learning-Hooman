@@ -1,6 +1,9 @@
 /* About Page Styles */
-.about-page {
-  font-family: "Inter", sans-serif;
+body {
+  font-family: "Andada Pro", serif;
+  background: #fafbfc;
+  margin: 0;
+  padding: 0;
 }
 
 /* Hero Section */

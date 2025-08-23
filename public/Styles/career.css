@@ -1,4 +1,11 @@
 /* Career Page Styles */
+body {
+  font-family: "Andada Pro", serif;
+  background: #fafbfc;
+  margin: 0;
+  padding: 0;
+}
+
 .career-page {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
